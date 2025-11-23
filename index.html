@@ -68,7 +68,7 @@
         .hero-section {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: white;
-            padding: 180px 0 120px;
+            padding: 150px 0 80px;
             position: relative;
             overflow: hidden;
         }
@@ -87,15 +87,15 @@
         }
 
         .profile-image {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             border: 4px solid rgba(255, 255, 255, 0.2);
             object-fit: cover;
-            margin: 0 auto 30px;
+            margin: 0 auto 25px;
             display: block;
             background: linear-gradient(135deg, #667eea, #764ba2);
-            padding: 8px;
+            padding: 6px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
         }
@@ -107,18 +107,18 @@
         /* Modern Section Titles */
         .section-title {
             position: relative;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             font-weight: 700;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -12px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
+            width: 70px;
             height: 4px;
             background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             border-radius: 2px;
@@ -147,13 +147,13 @@
         }
 
         .modern-card:hover {
-            transform: translateY(-12px) scale(1.02);
+            transform: translateY(-8px);
             box-shadow: var(--card-hover-shadow);
         }
 
         /* Compact Card Header */
         .card-header-compact {
-            height: 80px;
+            height: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -175,25 +175,27 @@
         .card-header-compact i {
             position: relative;
             z-index: 2;
-            font-size: 2rem;
+            font-size: 1.8rem;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         /* Enhanced Card Body */
         .card-body-enhanced {
-            padding: 25px;
+            padding: 20px;
         }
 
         .tech-badge {
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
             border: none;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.7rem;
             font-weight: 500;
             margin: 2px;
+            display: inline-block;
             transition: all 0.3s ease;
+            line-height: 1.2;
         }
 
         .tech-badge:hover {
@@ -204,12 +206,13 @@
         /* Modern Buttons */
         .btn-modern {
             border: none;
-            border-radius: 25px;
-            padding: 10px 24px;
+            border-radius: 20px;
+            padding: 8px 20px;
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            font-size: 0.9rem;
         }
 
         .btn-modern::before {
@@ -241,21 +244,22 @@
         .skill-card {
             background: white;
             border-radius: 16px;
-            padding: 30px;
+            padding: 25px;
             text-align: center;
             transition: all 0.3s ease;
             border: 1px solid rgba(0, 0, 0, 0.05);
             box-shadow: var(--card-shadow);
+            margin-bottom: 25px;
         }
 
         .skill-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
             box-shadow: var(--card-hover-shadow);
         }
 
         .skill-icon-modern {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
             background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -271,32 +275,32 @@
         }
 
         .contact-icon-modern {
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
+            margin: 0 auto 15px;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
         }
 
         /* Back to Top Button Enhancement */
         .back-to-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
+            bottom: 25px;
+            right: 25px;
+            width: 45px;
+            height: 45px;
             background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             color: white;
             border-radius: 50%;
             text-align: center;
-            line-height: 50px;
-            font-size: 1.2rem;
+            line-height: 45px;
+            font-size: 1.1rem;
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
@@ -319,7 +323,7 @@
         .footer-modern {
             background: var(--dark-color);
             color: white;
-            padding: 40px 0 20px;
+            padding: 30px 0 15px;
             position: relative;
         }
 
@@ -335,13 +339,13 @@
 
         .social-links a {
             display: inline-block;
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             text-align: center;
-            line-height: 40px;
-            margin: 0 5px;
+            line-height: 35px;
+            margin: 0 4px;
             color: white;
             transition: all 0.3s ease;
         }
@@ -351,38 +355,47 @@
             transform: translateY(-3px);
         }
 
-        /* Experience Timeline */
-        .timeline-item {
-            border-left: 3px solid var(--primary-color);
-            padding-left: 25px;
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -8px;
-            top: 0;
-            width: 13px;
-            height: 13px;
-            background: var(--primary-color);
-            border-radius: 50%;
+        /* Section spacing */
+        section {
+            padding: 60px 0;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero-section {
-                padding: 120px 0 80px;
+                padding: 120px 0 60px;
             }
             
             .section-title {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                margin-bottom: 30px;
             }
             
             .modern-card:hover {
-                transform: translateY(-5px);
+                transform: translateY(-3px);
             }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+        }
+
+        /* Fix for navigation scrolling */
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        /* Better badge wrapping */
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin: 8px 0;
         }
     </style>
 </head>
@@ -438,52 +451,52 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
+    <section id="about" class="py-4">
         <div class="container">
             <h2 class="text-center section-title">About Me</h2>
             <div class="row">
                 <div class="col-lg-6">
-                    <h3 class="h4 mb-4">From Telecom Expert to Full-Stack Developer</h3>
-                    <p class="mb-4">
+                    <h3 class="h4 mb-3">From Telecom Expert to Full-Stack Developer</h3>
+                    <p class="mb-3">
                         A full-stack developer and telecom specialist with <strong>13+ years of cross-domain experience</strong>, bridging RF engineering, KPI analytics, and modern software development.
                     </p>
-                    <p class="mb-4">
+                    <p class="mb-3">
                         My career started in the telecom field, where I spent a decade working on <strong>5G/4G/3G/2G optimization</strong>, coordinating large regional teams, managing RF performance, and supporting major projects for <strong>STC, Huawei, Zain, Mobily, and ITC</strong> across Saudi Arabia.
                     </p>
-                    <p class="mb-4">
+                    <p class="mb-3">
                         In <strong>August 2022</strong>, I expanded my technical journey into full-stack development, specializing in <strong>Django, Python, REST APIs, MySQL, JavaScript, and Bootstrap</strong>. Today, I build data-driven dashboards, enterprise systems, and web applications that combine my telecom domain knowledge with advanced software engineering.
                     </p>
-                    <div class="row text-center mb-4">
-                        <div class="col-6 col-md-3">
+                    <div class="row text-center mb-3">
+                        <div class="col-6 col-md-3 mb-3">
                             <div class="skill-icon-modern">
                                 <i class="fas fa-mobile-alt"></i>
                             </div>
                             <h5>Telecom Expert</h5>
-                            <p>13+ Years</p>
+                            <p class="small">13+ Years</p>
                         </div>
-                        <div class="col-6 col-md-3">
+                        <div class="col-6 col-md-3 mb-3">
                             <div class="skill-icon-modern">
                                 <i class="fas fa-code"></i>
                             </div>
                             <h5>Full-Stack</h5>
-                            <p>Django & Python</p>
+                            <p class="small">Django & Python</p>
                         </div>
-                        <div class="col-6 col-md-3">
+                        <div class="col-6 col-md-3 mb-3">
                             <div class="skill-icon-modern">
                                 <i class="fas fa-project-diagram"></i>
                             </div>
                             <h5>Projects</h5>
-                            <p>10+ Delivered</p>
+                            <p class="small">10+ Delivered</p>
                         </div>
-                        <div class="col-6 col-md-3">
+                        <div class="col-6 col-md-3 mb-3">
                             <div class="skill-icon-modern">
                                 <i class="fas fa-chart-line"></i>
                             </div>
                             <h5>KPI Specialist</h5>
-                            <p>Data Analytics</p>
+                            <p class="small">Data Analytics</p>
                         </div>
                     </div>
-                    <div class="d-flex gap-3">
+                    <div class="d-flex gap-2 flex-wrap">
                         <a href="https://www.linkedin.com/in/ziaullah-khan-8271561a" target="_blank" class="btn btn-outline-primary btn-modern">
                             <i class="fab fa-linkedin me-2"></i> LinkedIn
                         </a>
@@ -492,18 +505,18 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="col-lg-6 mt-4 mt-lg-0">
                     <div class="modern-card">
                         <div class="card-body-enhanced">
-                            <h4 class="card-title mb-4">My Hybrid Advantage</h4>
+                            <h4 class="card-title mb-3">My Hybrid Advantage</h4>
                             <div class="mb-3">
                                 <h5>Education</h5>
                                 <p class="mb-1"><strong>Bachelor of Science in Computer Science (BSCS Hons)</strong></p>
-                                <p class="text-muted">University of Engineering and Technology (UET), Peshawar | 2005-2009</p>
+                                <p class="text-muted small">University of Engineering and Technology (UET), Peshawar | 2005-2009</p>
                             </div>
                             <div class="mb-3">
                                 <h5>Core Expertise</h5>
-                                <div class="d-flex flex-wrap gap-2 mt-2">
+                                <div class="badge-container mt-2">
                                     <span class="tech-badge">Telecom Networks</span>
                                     <span class="tech-badge">5G/4G/3G/2G</span>
                                     <span class="tech-badge">KPI Analysis</span>
@@ -516,9 +529,9 @@
                             </div>
                             <div>
                                 <h5>Unique Value Proposition</h5>
-                                <ul class="list-unstyled mt-2">
-                                    <li class="mb-2">✔ Deep telecom expertise → KPI, RF, drive test, optimization</li>
-                                    <li class="mb-2">✔ Strong software skills → dashboards, automation, backend systems</li>
+                                <ul class="list-unstyled mt-2 small">
+                                    <li class="mb-1">✔ Deep telecom expertise → KPI, RF, drive test, optimization</li>
+                                    <li class="mb-1">✔ Strong software skills → dashboards, automation, backend systems</li>
                                     <li class="mb-0">✔ Ability to build solutions that solve real operational challenges</li>
                                 </ul>
                             </div>
@@ -530,16 +543,16 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-5 bg-light">
+    <section id="skills" class="py-4 bg-light">
         <div class="container">
             <h2 class="text-center section-title">Technical Skills</h2>
             <div class="row">
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4">
                     <div class="skill-card">
                         <i class="fab fa-python skill-icon-modern"></i>
                         <h5>Backend Development</h5>
-                        <p class="text-muted">Python, Django, Django REST Framework, MySQL, REST APIs, Database Design, Server Management</p>
-                        <div class="mt-3">
+                        <p class="text-muted small">Python, Django, Django REST Framework, MySQL, REST APIs, Database Design, Server Management</p>
+                        <div class="badge-container">
                             <span class="tech-badge">Python</span>
                             <span class="tech-badge">Django</span>
                             <span class="tech-badge">DRF</span>
@@ -549,12 +562,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4">
                     <div class="skill-card">
                         <i class="fab fa-html5 skill-icon-modern"></i>
                         <h5>Frontend & Tools</h5>
-                        <p class="text-muted">HTML5, CSS3, Bootstrap, JavaScript, Git/GitHub, Docker, Nginx/Apache</p>
-                        <div class="mt-3">
+                        <p class="text-muted small">HTML5, CSS3, Bootstrap, JavaScript, Git/GitHub, Docker, Nginx/Apache</p>
+                        <div class="badge-container">
                             <span class="tech-badge">HTML5</span>
                             <span class="tech-badge">CSS3</span>
                             <span class="tech-badge">Bootstrap</span>
@@ -564,12 +577,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4">
                     <div class="skill-card">
                         <i class="fas fa-network-wired skill-icon-modern"></i>
                         <h5>Telecom & Analytics</h5>
-                        <p class="text-muted">5G/4G/3G/2G Technologies, KPI Analysis, Network Optimization, Drive Testing, Power BI, Tableau</p>
-                        <div class="mt-3">
+                        <p class="text-muted small">5G/4G/3G/2G Technologies, KPI Analysis, Network Optimization, Drive Testing, Power BI, Tableau</p>
+                        <div class="badge-container">
                             <span class="tech-badge">5G/4G/3G</span>
                             <span class="tech-badge">KPI Analysis</span>
                             <span class="tech-badge">RF Optimization</span>
@@ -584,7 +597,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5">
+    <section id="projects" class="py-4">
         <div class="container">
             <h2 class="text-center section-title">Featured Projects</h2>
             <div class="row">
@@ -596,8 +609,8 @@
                         <div class="card-body-enhanced">
                             <span class="badge bg-primary mb-3 px-3 py-2">🚀 Flagship Project</span>
                             <h5 class="card-title fw-bold mb-3">Multi-Network KPI Dashboard</h5>
-                            <p class="card-text text-muted mb-4">Built a 5G/4G/3G/2G KPI web platform converting network logs into actionable insights. Improved data processing efficiency by 40% using optimized database queries.</p>
-                            <div class="mb-4">
+                            <p class="card-text text-muted mb-4 small">Built a 5G/4G/3G/2G KPI web platform converting network logs into actionable insights. Improved data processing efficiency by 40% using optimized database queries.</p>
+                            <div class="badge-container mb-4">
                                 <span class="tech-badge">Django</span>
                                 <span class="tech-badge">Python</span>
                                 <span class="tech-badge">MySQL</span>
@@ -605,7 +618,7 @@
                                 <span class="tech-badge">Chart.js</span>
                                 <span class="tech-badge">REST APIs</span>
                             </div>
-                            <div class="d-flex gap-3">
+                            <div class="d-flex gap-2">
                                 <a href="#" class="btn btn-modern btn-modern-primary flex-fill">
                                     <i class="fab fa-github me-2"></i>View Code
                                 </a>
@@ -616,6 +629,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-6 mb-4">
                     <div class="modern-card">
                         <div class="card-header-compact bg-success">
@@ -623,15 +637,15 @@
                         </div>
                         <div class="card-body-enhanced">
                             <h5 class="card-title fw-bold mb-3">Document Controller System</h5>
-                            <p class="card-text text-muted mb-4">End-to-end document lifecycle management with CRUD modules, workflow automation, role-based authentication, version control, and comprehensive audit trails.</p>
-                            <div class="mb-4">
+                            <p class="card-text text-muted mb-4 small">End-to-end document lifecycle management with CRUD modules, workflow automation, role-based authentication, version control, and comprehensive audit trails.</p>
+                            <div class="badge-container mb-4">
                                 <span class="tech-badge">Django</span>
                                 <span class="tech-badge">MySQL</span>
                                 <span class="tech-badge">Bootstrap</span>
                                 <span class="tech-badge">Authentication</span>
                                 <span class="tech-badge">Workflow</span>
                             </div>
-                            <div class="d-flex gap-3">
+                            <div class="d-flex gap-2">
                                 <a href="#" class="btn btn-modern btn-modern-primary flex-fill">
                                     <i class="fab fa-github me-2"></i>View Code
                                 </a>
@@ -642,6 +656,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-6 mb-4">
                     <div class="modern-card">
                         <div class="card-header-compact bg-info">
@@ -649,15 +664,15 @@
                         </div>
                         <div class="card-body-enhanced">
                             <h5 class="card-title fw-bold mb-3">Pharmacy Management System</h5>
-                            <p class="card-text text-muted mb-4">Complete pharmaceutical business management solution with inventory management, sales tracking, customer records, supplier management, and reporting capabilities.</p>
-                            <div class="mb-4">
+                            <p class="card-text text-muted mb-4 small">Complete pharmaceutical business management solution with inventory management, sales tracking, customer records, supplier management, and reporting capabilities.</p>
+                            <div class="badge-container mb-4">
                                 <span class="tech-badge">Django</span>
                                 <span class="tech-badge">MySQL</span>
                                 <span class="tech-badge">Bootstrap</span>
                                 <span class="tech-badge">JavaScript</span>
                                 <span class="tech-badge">Reporting</span>
                             </div>
-                            <div class="d-flex gap-3">
+                            <div class="d-flex gap-2">
                                 <a href="#" class="btn btn-modern btn-modern-primary flex-fill">
                                     <i class="fab fa-github me-2"></i>View Code
                                 </a>
@@ -668,6 +683,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-6 mb-4">
                     <div class="modern-card">
                         <div class="card-header-compact bg-warning">
@@ -675,15 +691,70 @@
                         </div>
                         <div class="card-body-enhanced">
                             <h5 class="card-title fw-bold mb-3">School Management System</h5>
-                            <p class="card-text text-muted mb-4">Comprehensive educational institution management platform with student registration, attendance tracking, grading system, fee management, and staff management modules.</p>
-                            <div class="mb-4">
+                            <p class="card-text text-muted mb-4 small">Comprehensive educational institution management platform with student registration, attendance tracking, grading system, fee management, and staff management modules.</p>
+                            <div class="badge-container mb-4">
                                 <span class="tech-badge">Django</span>
                                 <span class="tech-badge">MySQL</span>
                                 <span class="tech-badge">Bootstrap</span>
                                 <span class="tech-badge">HTML5</span>
                                 <span class="tech-badge">CSS3</span>
                             </div>
-                            <div class="d-flex gap-3">
+                            <div class="d-flex gap-2">
+                                <a href="#" class="btn btn-modern btn-modern-primary flex-fill">
+                                    <i class="fab fa-github me-2"></i>View Code
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-modern flex-fill">
+                                    <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Projects -->
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-secondary">
+                            <i class="fas fa-blog text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <h5 class="card-title fw-bold mb-3">Blog / CMS Platform</h5>
+                            <p class="card-text text-muted mb-4 small">SEO-ready content management system with user management, post categories, comments system, and admin dashboard for content management.</p>
+                            <div class="badge-container mb-4">
+                                <span class="tech-badge">Django</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Bootstrap</span>
+                                <span class="tech-badge">SEO</span>
+                                <span class="tech-badge">Content Management</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="#" class="btn btn-modern btn-modern-primary flex-fill">
+                                    <i class="fab fa-github me-2"></i>View Code
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-modern flex-fill">
+                                    <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-dark">
+                            <i class="fas fa-globe text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <h5 class="card-title fw-bold mb-3">College Website & Portal</h5>
+                            <p class="card-text text-muted mb-4 small">Responsive college website with admin backend, student portal, course management, and announcement system for educational institutions.</p>
+                            <div class="badge-container mb-4">
+                                <span class="tech-badge">Django</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Bootstrap</span>
+                                <span class="tech-badge">Responsive</span>
+                                <span class="tech-badge">Portal</span>
+                            </div>
+                            <div class="d-flex gap-2">
                                 <a href="#" class="btn btn-modern btn-modern-primary flex-fill">
                                     <i class="fab fa-github me-2"></i>View Code
                                 </a>
@@ -699,10 +770,11 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-5 bg-light">
+    <section id="experience" class="py-4 bg-light">
         <div class="container">
             <h2 class="text-center section-title">Professional Experience</h2>
             <div class="row">
+                <!-- Current Role -->
                 <div class="col-lg-6 mb-4">
                     <div class="modern-card">
                         <div class="card-header-compact bg-primary">
@@ -711,23 +783,23 @@
                         <div class="card-body-enhanced">
                             <span class="badge bg-primary mb-3 px-3 py-2">🌟 Current Role</span>
                             <h5 class="card-title fw-bold mb-2">Full-Stack Developer (Django/Python) | Technical Instructor</h5>
-                            <p class="text-muted mb-3">
+                            <p class="text-muted mb-3 small">
                                 <i class="fas fa-building me-2"></i>Self-employed & PCST College 
                                 <span class="mx-2">•</span>
                                 <i class="fas fa-calendar me-2"></i>Aug 2022 - Present · 3 yrs 4 mos
                             </p>
-                            <p class="card-text mb-3">Bringing together 10+ years of telecom experience with modern full-stack development to build data-intensive, scalable applications.</p>
+                            <p class="card-text mb-3 small">Bringing together 10+ years of telecom experience with modern full-stack development to build data-intensive, scalable applications.</p>
                             
                             <h6 class="fw-semibold mt-4 mb-2 text-primary">Key Responsibilities:</h6>
-                            <ul class="mb-3">
-                                <li>Develop full-stack web applications using Django, Python, MySQL, REST APIs, HTML5, CSS3, JS, Bootstrap</li>
-                                <li>Translate telecom workflows and KPIs into automated dashboards and reporting tools</li>
+                            <ul class="mb-3 small">
+                                <li>Develop full-stack web applications using Django, Python, MySQL, REST APIs</li>
+                                <li>Translate telecom workflows and KPIs into automated dashboards</li>
                                 <li>Deliver training on Django, Python, Databases, and Web Development</li>
                                 <li>Optimize backend performance and design database schemas</li>
                             </ul>
 
                             <h6 class="fw-semibold mt-4 mb-2 text-primary">Achievements:</h6>
-                            <ul class="mb-3">
+                            <ul class="mb-3 small">
                                 <li>Delivered 10+ full-stack projects for clients across multiple industries</li>
                                 <li>Improved data processing efficiency for telecom dashboards by 40%</li>
                                 <li>Developed reusable Django modules that reduce future development time</li>
@@ -735,19 +807,22 @@
 
                             <div class="mt-4">
                                 <h6 class="fw-semibold mb-3 text-primary">🛠 Technologies</h6>
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">Django</span>
-                                <span class="tech-badge">DRF</span>
-                                <span class="tech-badge">MySQL</span>
-                                <span class="tech-badge">REST APIs</span>
-                                <span class="tech-badge">Bootstrap</span>
-                                <span class="tech-badge">Git</span>
-                                <span class="tech-badge">Docker</span>
+                                <div class="badge-container">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Django</span>
+                                    <span class="tech-badge">DRF</span>
+                                    <span class="tech-badge">MySQL</span>
+                                    <span class="tech-badge">REST APIs</span>
+                                    <span class="tech-badge">Bootstrap</span>
+                                    <span class="tech-badge">Git</span>
+                                    <span class="tech-badge">Docker</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Multi-Tech RF Analyst -->
                 <div class="col-lg-6 mb-4">
                     <div class="modern-card">
                         <div class="card-header-compact bg-success">
@@ -756,15 +831,15 @@
                         <div class="card-body-enhanced">
                             <span class="badge bg-success mb-3 px-3 py-2">📊 Telecom Expertise</span>
                             <h5 class="card-title fw-bold mb-2">Multi-Tech. KPI RF Analyst | RF Coordinator</h5>
-                            <p class="text-muted mb-3">
+                            <p class="text-muted mb-3 small">
                                 <i class="fas fa-building me-2"></i>HAAPCOL (Huawei Technologies - STC, Zain, ITC, Mobily Projects)
                                 <span class="mx-2">•</span>
                                 <i class="fas fa-calendar me-2"></i>Apr 2020 - Jul 2022 · 2 yrs 4 mos
                             </p>
-                            <p class="card-text mb-3">Orchestrated end-to-end RF performance across multi-technology networks while coordinating field teams and delivering data-driven insights.</p>
+                            <p class="card-text mb-3 small">Orchestrated end-to-end RF performance across multi-technology networks while coordinating field teams and delivering data-driven insights.</p>
                             
                             <h6 class="fw-semibold mt-4 mb-2 text-primary">Key Responsibilities:</h6>
-                            <ul class="mb-3">
+                            <ul class="mb-3 small">
                                 <li>Conducted KPI analysis and RF post-processing for 5G, 4G+, 3G, 2G, NB-IoT</li>
                                 <li>Created detailed performance reports and identified optimization opportunities</li>
                                 <li>Managed drive-test teams across multiple regions with real-time troubleshooting</li>
@@ -772,7 +847,7 @@
                             </ul>
 
                             <h6 class="fw-semibold mt-4 mb-2 text-primary">Achievements:</h6>
-                            <ul class="mb-3">
+                            <ul class="mb-3 small">
                                 <li>Improved regional KPI visibility by creating standardized reporting formats</li>
                                 <li>Reduced troubleshooting turnaround time by 30% through better coordination</li>
                                 <li>Supported large-scale optimization initiatives for major telecom operators</li>
@@ -780,13 +855,15 @@
 
                             <div class="mt-4">
                                 <h6 class="fw-semibold mb-3 text-primary">🛠 Technologies</h6>
-                                <span class="tech-badge">KPI Analysis</span>
-                                <span class="tech-badge">RF Optimization</span>
-                                <span class="tech-badge">TEMS</span>
-                                <span class="tech-badge">Genex Probe</span>
-                                <span class="tech-badge">Power BI</span>
-                                <span class="tech-badge">Drive Testing</span>
-                                <span class="tech-badge">5G/4G/3G</span>
+                                <div class="badge-container">
+                                    <span class="tech-badge">KPI Analysis</span>
+                                    <span class="tech-badge">RF Optimization</span>
+                                    <span class="tech-badge">TEMS</span>
+                                    <span class="tech-badge">Genex Probe</span>
+                                    <span class="tech-badge">Power BI</span>
+                                    <span class="tech-badge">Drive Testing</span>
+                                    <span class="tech-badge">5G/4G/3G</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -796,16 +873,22 @@
                 <div class="col-lg-6 mb-4">
                     <div class="modern-card">
                         <div class="card-header-compact bg-info">
-                            <i class="fas fa-chart-line text-white"></i>
+                            <i class="fas fa-satellite-dish text-white"></i>
                         </div>
                         <div class="card-body-enhanced">
                             <h5 class="card-title fw-bold mb-2">5G RF Coordinator | Huawei STC Projects</h5>
-                            <p class="text-muted mb-3">
+                            <p class="text-muted mb-3 small">
                                 <i class="fas fa-building me-2"></i>HAAPCOL
                                 <span class="mx-2">•</span>
                                 <i class="fas fa-calendar me-2"></i>Oct 2019 - Apr 2020 · 7 mos
                             </p>
-                            <p class="card-text">Coordinated 5G Phase 1 & Phase 2 rollout for STC across Eastern region. Managed site-level execution and optimization activities.</p>
+                            <p class="card-text mb-3 small">Coordinated 5G Phase 1 & Phase 2 rollout for STC across Eastern region. Managed site-level execution and optimization activities.</p>
+                            <div class="badge-container mt-3">
+                                <span class="tech-badge">5G Technology</span>
+                                <span class="tech-badge">RF Coordination</span>
+                                <span class="tech-badge">Network Deployment</span>
+                                <span class="tech-badge">STC Projects</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -813,20 +896,136 @@
                 <div class="col-lg-6 mb-4">
                     <div class="modern-card">
                         <div class="card-header-compact bg-warning">
-                            <i class="fas fa-mobile-alt text-white"></i>
+                            <i class="fas fa-chart-line text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <h5 class="card-title fw-bold mb-2">5G RF Post Processing Engineer</h5>
+                            <p class="text-muted mb-3 small">
+                                <i class="fas fa-building me-2"></i>HAAPCOL
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-calendar me-2"></i>Jul 2019 - Oct 2019 · 4 mos
+                            </p>
+                            <p class="card-text mb-3 small">Processed 5G DT logs and analyzed performance for Zain Sophia Project in Central/East Region K.S.A. Generated technical reports covering coverage, throughput, and layer performance.</p>
+                            <div class="badge-container mt-3">
+                                <span class="tech-badge">5G Analysis</span>
+                                <span class="tech-badge">Drive Test</span>
+                                <span class="tech-badge">Performance Reports</span>
+                                <span class="tech-badge">Zain Projects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-secondary">
+                            <i class="fas fa-signal text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <h5 class="card-title fw-bold mb-2">4G+ RF Post Processing Engineer</h5>
+                            <p class="text-muted mb-3 small">
+                                <i class="fas fa-building me-2"></i>HAAPCOL
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-calendar me-2"></i>Mar 2019 - Jul 2019 · 5 mos
+                            </p>
+                            <p class="card-text mb-3 small">Processed and analyzed 4G+ KPIs for STC Aspiration Project in Central Region K.S.A. Identified problematic sites and recommended optimization measures.</p>
+                            <div class="badge-container mt-3">
+                                <span class="tech-badge">4G+ Analysis</span>
+                                <span class="tech-badge">KPI Monitoring</span>
+                                <span class="tech-badge">Optimization</span>
+                                <span class="tech-badge">STC Projects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-dark">
+                            <i class="fas fa-car text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <h5 class="card-title fw-bold mb-2">Drive Test Engineer</h5>
+                            <p class="text-muted mb-3 small">
+                                <i class="fas fa-building me-2"></i>HAAPCOL
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-calendar me-2"></i>Jun 2015 - Mar 2019 · 3 yrs 10 mos
+                            </p>
+                            <p class="card-text mb-3 small">Executed drive tests for 4G/4G+ networks across East, North, South, and Central regions. Conducted post-processing using TEMS/GENEX and delivered site-level reports.</p>
+                            <div class="badge-container mt-3">
+                                <span class="tech-badge">Drive Testing</span>
+                                <span class="tech-badge">TEMS</span>
+                                <span class="tech-badge">GENEX</span>
+                                <span class="tech-badge">Field Operations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-primary">
+                            <i class="fas fa-mobile text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <h5 class="card-title fw-bold mb-2">Drive Test Engineer</h5>
+                            <p class="text-muted mb-3 small">
+                                <i class="fas fa-building me-2"></i>Delta Turkish Company
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-calendar me-2"></i>Jan 2015 - Jun 2015 · 6 mos
+                            </p>
+                            <p class="card-text mb-3 small">Performed 2G/3G drive testing for STC 4G3 Project in South Region. Conducted site validation and technical reporting.</p>
+                            <div class="badge-container mt-3">
+                                <span class="tech-badge">2G/3G Testing</span>
+                                <span class="tech-badge">Site Validation</span>
+                                <span class="tech-badge">Technical Reports</span>
+                                <span class="tech-badge">Field Testing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-success">
+                            <i class="fas fa-graduation-cap text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <h5 class="card-title fw-bold mb-2">Lecturer in Computer Science</h5>
+                            <p class="text-muted mb-3 small">
+                                <i class="fas fa-building me-2"></i>Govt. Polytechnic Institute Wari
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-calendar me-2"></i>2010 - 2011 · 1 yr
+                            </p>
+                            <p class="card-text mb-3 small">Taught programming, database fundamentals, and computer systems. Mentored students for technical exams and practical assignments.</p>
+                            <div class="badge-container mt-3">
+                                <span class="tech-badge">Teaching</span>
+                                <span class="tech-badge">Programming</span>
+                                <span class="tech-badge">Databases</span>
+                                <span class="tech-badge">Mentoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-info">
+                            <i class="fab fa-java text-white"></i>
                         </div>
                         <div class="card-body-enhanced">
                             <h5 class="card-title fw-bold mb-2">Java Developer (Freelance)</h5>
-                            <p class="text-muted mb-3">
+                            <p class="text-muted mb-3 small">
                                 <i class="fas fa-building me-2"></i>Freelance
                                 <span class="mx-2">•</span>
                                 <i class="fas fa-calendar me-2"></i>2011 - 2015 · 4 yrs
                             </p>
-                            <p class="card-text">Developed mobile applications including Telecom Task Time System, Kids English Learning App, and All in One Calculator App.</p>
-                            <div class="mt-3">
+                            <p class="card-text mb-3 small">Developed mobile applications including Telecom Task Time System, Kids English Learning App, and All in One Calculator App.</p>
+                            <div class="badge-container mt-3">
                                 <span class="tech-badge">Java</span>
                                 <span class="tech-badge">Android</span>
                                 <span class="tech-badge">Mobile Development</span>
+                                <span class="tech-badge">App Development</span>
                             </div>
                         </div>
                     </div>
@@ -836,7 +1035,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
+    <section id="contact" class="py-4">
         <div class="container">
             <h2 class="text-center section-title">Get In Touch</h2>
             <div class="row justify-content-center">
@@ -847,51 +1046,51 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <h5>Email</h5>
-                            <p>zia.uetian86@gmail.com</p>
+                            <p class="small">ziaullah@example.com</p>
                         </div>
                         <div class="col-md-4 mb-4 text-center">
                             <div class="contact-icon-modern">
                                 <i class="fas fa-phone"></i>
                             </div>
                             <h5>Phone</h5>
-                            <p>+92 3426766422</p>
+                            <p class="small">+92 XXX XXXXXXX</p>
                         </div>
                         <div class="col-md-4 mb-4 text-center">
                             <div class="contact-icon-modern">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <h5>Location</h5>
-                            <p>Peshawar, Pakistan</p>
+                            <p class="small">Peshawar, Pakistan</p>
                         </div>
                     </div>
                     
-                    <div class="row mt-5">
+                    <div class="row mt-4">
                         <div class="col-lg-8 mx-auto">
                             <div class="contact-card">
                                 <div class="card-body p-4">
-                                    <h4 class="text-center mb-4">Send Me a Message</h4>
-                                    <p class="text-center text-muted mb-4">I am open to opportunities in Full-Stack Development, Telecom Software, RF/KPI Engineering, and Hybrid Technical Roles</p>
+                                    <h4 class="text-center mb-3">Send Me a Message</h4>
+                                    <p class="text-center text-muted mb-4 small">I am open to opportunities in Full-Stack Development, Telecom Software, RF/KPI Engineering, and Hybrid Technical Roles</p>
                                     <form id="contactForm">
                                         <div class="row">
                                             <div class="col-md-6 mb-3">
-                                                <label for="name" class="form-label">Your Name</label>
-                                                <input type="text" class="form-control" id="name" name="name" required>
+                                                <label for="name" class="form-label small">Your Name</label>
+                                                <input type="text" class="form-control form-control-sm" id="name" name="name" required>
                                             </div>
                                             <div class="col-md-6 mb-3">
-                                                <label for="email" class="form-label">Your Email</label>
-                                                <input type="email" class="form-control" id="email" name="email" required>
+                                                <label for="email" class="form-label small">Your Email</label>
+                                                <input type="email" class="form-control form-control-sm" id="email" name="email" required>
                                             </div>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="subject" class="form-label">Subject</label>
-                                            <input type="text" class="form-control" id="subject" name="subject" required>
+                                            <label for="subject" class="form-label small">Subject</label>
+                                            <input type="text" class="form-control form-control-sm" id="subject" name="subject" required>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="message" class="form-label">Message</label>
-                                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                            <label for="message" class="form-label small">Message</label>
+                                            <textarea class="form-control form-control-sm" id="message" name="message" rows="4" required></textarea>
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit" class="btn btn-modern btn-modern-primary btn-lg">Send Message</button>
+                                            <button type="submit" class="btn btn-modern btn-modern-primary">Send Message</button>
                                         </div>
                                     </form>
                                 </div>
@@ -908,7 +1107,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2024 Ziaullah Khan. All rights reserved.</p>
+                    <p class="mb-0 small">&copy; 2024 Ziaullah Khan. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="social-links">
