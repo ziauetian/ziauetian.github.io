@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziaullah - Full Stack Developer & Telecom RF Specialist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --dark-color: #2d3748;
+            --light-color: #f8f9fa;
+            --accent-color: #00c9ff;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --card-hover-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background: #fafbfc;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* Modern Navigation */
+        .navbar {
+            padding: 12px 0;
+            transition: all 0.3s ease;
+            background: rgba(45, 55, 72, 0.98) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.6rem;
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            margin: 0 8px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Enhanced Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 180px 0 120px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            object-fit: cover;
+            margin: 0 auto 30px;
+            display: block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 8px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        /* Modern Section Titles */
+        .section-title {
+            position: relative;
+            margin-bottom: 60px;
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        /* Modern Cards */
+        .modern-card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: white;
+            box-shadow: var(--card-shadow);
+            height: 100%;
+            position: relative;
+        }
+
+        .modern-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        }
+
+        .modern-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        /* Compact Card Header */
+        .card-header-compact {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header-compact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            opacity: 0.9;
+        }
+
+        .card-header-compact i {
+            position: relative;
+            z-index: 2;
+            font-size: 2rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Enhanced Card Body */
+        .card-body-enhanced {
+            padding: 25px;
+        }
+
+        .tech-badge {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .tech-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Modern Buttons */
+        .btn-modern {
+            border: none;
+            border-radius: 25px;
+            padding: 10px 24px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-modern:hover::before {
+            left: 100%;
+        }
+
+        .btn-modern-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .btn-modern-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Skills Section Enhancement */
+        .skill-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: var(--card-shadow);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .skill-icon-modern {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Contact Section Enhancement */
+        .contact-card {
+            background: white;
+            border-radius: 20px;
+            border: none;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+        }
+
+        .contact-icon-modern {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Back to Top Button Enhancement */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
+        }
+
+        /* Enhanced Footer */
+        .footer-modern {
+            background: var(--dark-color);
+            color: white;
+            padding: 40px 0 20px;
+            position: relative;
+        }
+
+        .footer-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 5px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 120px 0 80px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .modern-card:hover {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ziaullah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <img src="https://ui-avatars.com/api/?name=Ziaullah&size=250&background=667eea&color=fff&bold=true" alt="Profile" class="profile-image">
+                    <h1 class="display-4 fw-bold mb-3">Hi, I'm <span class="text-warning">Ziaullah</span></h1>
+                    <h2 class="h3 mb-4">Full-Stack Web Developer & Telecom RF Specialist</h2>
+                    <p class="lead mb-4">Building bridges between network expertise and innovative software solutions</p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="#projects" class="btn btn-warning btn-lg btn-modern">View My Work</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg btn-modern">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">About Me</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="h4 mb-4">From Telecom Expert to Full-Stack Web Developer</h3>
+                    <p class="mb-4">
+                        With over 10 years of experience in telecommunications with STC and Huawei, 
+                        I've successfully transitioned into full-stack development, bringing unique 
+                        domain expertise to software solutions.
+                    </p>
+                    <p class="mb-4">
+                        My journey from 5G Coordination to Django development has equipped me with 
+                        a rare combination of network optimization knowledge and modern web development 
+                        skills.
+                    </p>
+                    <div class="row text-center mb-4">
+                        <div class="col-6 col-md-3">
+                            <div class="skill-icon-modern">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h5>Telecom Expert</h5>
+                            <p>10+ Years</p>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="skill-icon-modern">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h5>Full-Stack</h5>
+                            <p>Django & Python</p>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="skill-icon-modern">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h5>Projects</h5>
+                            <p>6+ Completed</p>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="skill-icon-modern">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h5>KPI Specialist</h5>
+                            <p>Data Analysis</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.linkedin.com/in/ziaullah-khan-8271561a" target="_blank" class="btn btn-outline-primary btn-modern">
+                            <i class="fab fa-linkedin me-2"></i> LinkedIn
+                        </a>
+                        <a href="#" class="btn btn-outline-dark btn-modern">
+                            <i class="fab fa-github me-2"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="modern-card">
+                        <div class="card-body-enhanced">
+                            <h4 class="card-title mb-4">My Background</h4>
+                            <div class="mb-3">
+                                <h5>Education</h5>
+                                <p class="mb-1"><strong>Bachelor of Science in Computer Science (BSCS Hons)</strong></p>
+                                <p class="text-muted">University of Engineering and Technology (UET), Peshawar | 2009</p>
+                            </div>
+                            <div class="mb-3">
+                                <h5>Core Expertise</h5>
+                                <div class="d-flex flex-wrap gap-2 mt-2">
+                                    <span class="tech-badge">Telecom Networks</span>
+                                    <span class="tech-badge">5G Technology</span>
+                                    <span class="tech-badge">KPI Analysis</span>
+                                    <span class="tech-badge">Python/Django</span>
+                                    <span class="tech-badge">MySQL</span>
+                                    <span class="tech-badge">Web Development</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h5>Career Transition</h5>
+                                <p class="mb-0">
+                                    Leveraging my telecom domain knowledge to build specialized software solutions, 
+                                    particularly in network performance monitoring and data visualization.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Technical Skills</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-python skill-icon-modern"></i>
+                        <h5>Backend Development</h5>
+                        <p class="text-muted">Python, Django, MySQL, REST APIs, Database Design, Server Management</p>
+                        <div class="mt-3">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-html5 skill-icon-modern"></i>
+                        <h5>Frontend Development</h5>
+                        <p class="text-muted">HTML5, CSS3, Bootstrap, JavaScript, Responsive Design, UI/UX Principles</p>
+                        <div class="mt-3">
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">Bootstrap</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-network-wired skill-icon-modern"></i>
+                        <h5>Telecom & Networking</h5>
+                        <p class="text-muted">5G/4G/3G/2G Technologies, KPI Analysis, Network Optimization, Drive Testing</p>
+                        <div class="mt-3">
+                            <span class="tech-badge">5G/4G/3G</span>
+                            <span class="tech-badge">KPI Analysis</span>
+                            <span class="tech-badge">Network Optimization</span>
+                            <span class="tech-badge">Drive Testing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Featured Projects</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-primary">
+                            <i class="fas fa-chart-bar text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <span class="badge bg-primary mb-3 px-3 py-2">🚀 Flagship Project</span>
+                            <h5 class="card-title fw-bold mb-3">Multi-Network KPI Dashboard</h5>
+                            <p class="card-text text-muted mb-4">Static dashboard displaying 2G, 3G, 4G, and 5G network performance metrics with data visualization. Currently developing dynamic version with real-time data capabilities.</p>
+                            <div class="mb-4">
+                                <span class="tech-badge">Django</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Bootstrap</span>
+                                <span class="tech-badge">Chart.js</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="btn btn-modern btn-modern-primary flex-fill">
+                                    <i class="fab fa-github me-2"></i>View Code
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-modern flex-fill">
+                                    <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-success">
+                            <i class="fas fa-school text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <h5 class="card-title fw-bold mb-3">School Management System</h5>
+                            <p class="card-text text-muted mb-4">Comprehensive educational institution management platform with student registration, attendance tracking, grading system, fee management, and staff management modules.</p>
+                            <div class="mb-4">
+                                <span class="tech-badge">Django</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Bootstrap</span>
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="btn btn-modern btn-modern-primary flex-fill">
+                                    <i class="fab fa-github me-2"></i>View Code
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-modern flex-fill">
+                                    <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-info">
+                            <i class="fas fa-pills text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <h5 class="card-title fw-bold mb-3">Pharmacy Management System</h5>
+                            <p class="card-text text-muted mb-4">Complete pharmaceutical business management solution with inventory management, sales tracking, customer records, supplier management, and reporting capabilities.</p>
+                            <div class="mb-4">
+                                <span class="tech-badge">Django</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Bootstrap</span>
+                                <span class="tech-badge">JavaScript</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="btn btn-modern btn-modern-primary flex-fill">
+                                    <i class="fab fa-github me-2"></i>View Code
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-modern flex-fill">
+                                    <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-warning">
+                            <i class="fas fa-file-contract text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <h5 class="card-title fw-bold mb-3">Document Controller System</h5>
+                            <p class="card-text text-muted mb-4">Complex document management and tracking application with user permissions, version control, approval workflows, and comprehensive audit trails.</p>
+                            <div class="mb-4">
+                                <span class="tech-badge">Django</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Bootstrap</span>
+                                <span class="tech-badge">Authentication</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="btn btn-modern btn-modern-primary flex-fill">
+                                    <i class="fab fa-github me-2"></i>View Code
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-modern flex-fill">
+                                    <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Professional Journey</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-primary">
+                            <i class="fas fa-code text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <span class="badge bg-primary mb-3 px-3 py-2">🌟 Current Role</span>
+                            <h5 class="card-title fw-bold mb-2">Full-Stack Developer & Instructor</h5>
+                            <p class="text-muted mb-3">
+                                <i class="fas fa-building me-2"></i>Freelance & PCST College 
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-calendar me-2"></i>2024 - Present
+                            </p>
+                            <p class="card-text mb-4">Developed multiple full-stack web applications using Django, MySQL, and Bootstrap. Teaching Django, MySQL, HTML5, CSS3, and Bootstrap to college students.</p>
+                            <div class="mb-4">
+                                <h6 class="fw-semibold mb-3 text-primary">🛠 Key Technologies</h6>
+                                <span class="tech-badge">Django</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Bootstrap</span>
+                                <span class="tech-badge">Teaching</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-success">
+                            <i class="fas fa-network-wired text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <span class="badge bg-success mb-3 px-3 py-2">📊 Coordination</span>
+                            <h5 class="card-title fw-bold mb-2">5G Coordinator</h5>
+                            <p class="text-muted mb-3">
+                                <i class="fas fa-building me-2"></i>STC-Huawei Maintenance Project 
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-calendar me-2"></i>2021 - 2022
+                            </p>
+                            <p class="card-text mb-4">Coordinated 5G network deployment activities between STC and Huawei teams. Managed project timelines and ensured adherence to implementation schedules.</p>
+                            <div class="mb-4">
+                                <h6 class="fw-semibold mb-3 text-primary">🛠 Key Technologies</h6>
+                                <span class="tech-badge">5G Technology</span>
+                                <span class="tech-badge">Project Coordination</span>
+                                <span class="tech-badge">STC-Huawei</span>
+                                <span class="tech-badge">Network Deployment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-info">
+                            <i class="fas fa-chart-line text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <span class="badge bg-info mb-3 px-3 py-2">🔧 Engineering</span>
+                            <h5 class="card-title fw-bold mb-2">Post Processing Engineer - KPI Analysis</h5>
+                            <p class="text-muted mb-3">
+                                <i class="fas fa-building me-2"></i>STC-Huawei Maintenance Project 
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-calendar me-2"></i>2019 - 2021
+                            </p>
+                            <p class="card-text mb-4">Analyzed and monitored network KPIs across 2G, 3G, 4G, and 5G technologies. Identified network performance issues and recommended optimization solutions.</p>
+                            <div class="mb-4">
+                                <h6 class="fw-semibold mb-3 text-primary">🛠 Key Technologies</h6>
+                                <span class="tech-badge">KPI Analysis</span>
+                                <span class="tech-badge">2G/3G/4G/5G</span>
+                                <span class="tech-badge">Network Optimization</span>
+                                <span class="tech-badge">Performance Monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card">
+                        <div class="card-header-compact bg-warning">
+                            <i class="fas fa-tools text-white"></i>
+                        </div>
+                        <div class="card-body-enhanced">
+                            <span class="badge bg-warning mb-3 px-3 py-2">⚡ Technical</span>
+                            <h5 class="card-title fw-bold mb-2">Drive Test Engineer</h5>
+                            <p class="text-muted mb-3">
+                                <i class="fas fa-building me-2"></i>STC-Huawei Maintenance Project 
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-calendar me-2"></i>2015 - 2019
+                            </p>
+                            <p class="card-text mb-4">Conducted extensive drive testing across multiple network technologies. Collected and analyzed network performance data for STC maintenance projects.</p>
+                            <div class="mb-4">
+                                <h6 class="fw-semibold mb-3 text-primary">🛠 Key Technologies</h6>
+                                <span class="tech-badge">Drive Testing</span>
+                                <span class="tech-badge">Field Operations</span>
+                                <span class="tech-badge">Data Collection</span>
+                                <span class="tech-badge">Network Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-md-4 mb-4 text-center">
+                            <div class="contact-icon-modern">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h5>Email</h5>
+                            <p>your.email@example.com</p>
+                        </div>
+                        <div class="col-md-4 mb-4 text-center">
+                            <div class="contact-icon-modern">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h5>Phone</h5>
+                            <p>+92 XXX XXXXXXX</p>
+                        </div>
+                        <div class="col-md-4 mb-4 text-center">
+                            <div class="contact-icon-modern">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h5>Location</h5>
+                            <p>Peshawar, Pakistan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-5">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="contact-card">
+                                <div class="card-body p-4">
+                                    <h4 class="text-center mb-4">Send Me a Message</h4>
+                                    <form id="contactForm">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="name" class="form-label">Your Name</label>
+                                                <input type="text" class="form-control" id="name" name="name" required>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="email" class="form-label">Your Email</label>
+                                                <input type="email" class="form-control" id="email" name="email" required>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="subject" class="form-label">Subject</label>
+                                            <input type="text" class="form-control" id="subject" name="subject" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message" class="form-label">Message</label>
+                                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-modern btn-modern-primary btn-lg">Send Message</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 Ziaullah. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ziaullah-khan-8271561a" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('active');
+            } else {
+                backToTopButton.classList.remove('active');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('bg-dark');
+            } else {
+                document.querySelector('.navbar').classList.remove('bg-dark');
+            }
+        });
+        
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
